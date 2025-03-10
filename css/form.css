@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.header .menu div {
+    cursor: not-allowed;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.catalog {
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog-header h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: auto;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+#confirmationMessage {
+    margin-top: 20px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .latest-products, 
+    .backpack, 
+    .bags, 
+    .accessories, 
+    .collection, 
+    .gifting, 
+    .service {
+        display: none;
+    }
+    .header .menu {
+        gap: 15px;
+    }
+
+    .catalog-header h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    form {
+        width: 80%;
+    }
+}

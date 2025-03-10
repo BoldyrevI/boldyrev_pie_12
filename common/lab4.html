@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="лабораторная работа, программирование, циклы, задачи, блок-схемы">
+    <meta name="description" content="Лабораторная работа №4 по программированию: изучение циклов, задачи на программирование повторяющихся действий">
+    <title>Лабораторная работа №4</title>
+    <link rel="stylesheet" href="../css/lab4.css">
+    <script src="../js/lab4.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Лабораторная работа №4</h1>
+        <h2>Циклы</h2>
+    </header>
+    <div class="goals">
+        <p>Изучить циклические алгоритмы, операторы цикла. Запрограммировать циклический вычислительный процесс.</p>
+    </div>
+    <div class="tasks">
+        <div class="task">
+			<h3>Задача 1</h3>
+			<p>Во всех заданиях данной группы предполагается, что исходный набор содержит ненулевое число элементов (в частности, число N всегда больше нуля). В заданиях на обработку нескольких наборов чисел, количество наборов K также всегда является ненулевым.</p>
+			<p>Даны десять вещественных чисел. Найти произведение всех четных чисел.</p>
+			<label for="n">Введите количество чисел (N):</label>
+			<input type="number" id="n" min="1" required>
+			<label for="numbers">Введите числа (через точку с запятой):</label>
+			<input type="text" id="numbers" placeholder="Например: 2; 4.0; -6">
+			<button onclick="calc_task1()">Рассчитать</button>
+			<p id="result_task1"></p>
+		</div>
+		<div class="task">
+			<h3>Задача 2</h3>
+			<p>Вывести на экран ряд натуральных чисел от минимума до максимума с шагом. Например, если минимум 10, максимум 35, шаг 5 → вывод: 10 15 20 25 30 35.</p>
+			<label for="min">Минимум:</label>
+			<input type="number" id="min" required>
+			<label for="max">Максимум:</label>
+			<input type="number" id="max" required>
+			<label for="step">Шаг:</label>
+			<input type="number" id="step" min="1" required>
+			<button onclick="calc_task2()">Показать ряд</button>
+			<p id="result_task2"></p>
+		</div>
+    <footer>
+        <p>&copy; 2025 Лабораторная работа по программированию</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Roboto';
+    font-weight: normal;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: bold;
+    src: url('../fonts/Roboto-Bold.ttf');
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #ccddca;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/main_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: 1;
+}
+
+header h1, header h2 {
+    position: relative;
+    z-index: 2;
+}
+
+.goals {
+    margin: 20px auto;
+    font-size: 24px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.tasks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.task {
+    padding: 20px;
+    border: 1px solid #333;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.task p {
+    margin: 10px 0;
+}
+
+.task label, .task input, .task button {
+    display: block;
+    margin: 10px 0;
+}
+
+.task input {
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.task button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #41b479;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.task button:hover {
+    background-color: #68daae;
+}
+
+#result_task1, #result_task3 {
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    border-top: 1px solid #ccc;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/main_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px);
+    z-index: 1;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+main {
+    flex: 1;
+}

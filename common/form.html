@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="лабораторная работа, программирование">
+    <meta name="description" content="Создание товара в каталоге">
+    <title>Добавить товар</title>
+    <link rel="stylesheet" href="../css/form.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">NEXURA</div>
+        <div class="menu">
+            <div class="latest-products">Latest Products</div>
+            <div class="backpack">Backpack</div>
+            <div class="bags">Bags</div>
+            <div class="accessories">Accessories</div>
+            <div class="collection">Collection</div>
+            <div class="gifting">Gifting</div>
+            <div class="service">Service</div>
+        </div>
+    </div>
+    <div class="catalog">
+        <div class="catalog-header">
+            <h1>Добавить товар</h1>
+        </div>
+        <form id="productForm">
+            <div class="form-group">
+                <label for="productName">Название товара</label>
+                <input type="text" id="productName" required>
+            </div>
+            <div class="form-group">
+                <label for="productDescription">Описание товара</label>
+                <textarea id="productDescription" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="productPrice">Цена товара</label>
+                <input type="number" id="productPrice" required>
+            </div>
+            <button type="submit">Добавить товар</button>
+        </form>
+        <div id="confirmationMessage"></div>
+    </div>
+    <script>
+        document.getElementById('productForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('productName').value;
+            const description = document.getElementById('productDescription').value;
+            const price = parseFloat(document.getElementById('productPrice').value);
+            const productId = Math.floor(Math.random() * 1000) + 1;
+            const confirmationMessage = document.getElementById('confirmationMessage');
+            confirmationMessage.innerHTML = `Товар добавлен! ID: ${productId}, Цена: $${price.toFixed(2)}`;
+            document.getElementById('productForm').reset();
+        });
+    </script>
+</body>
+</html>

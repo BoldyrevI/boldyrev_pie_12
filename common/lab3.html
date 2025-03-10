@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="лабораторная работа, программирование, вычислительные процессы, задачи, блок-схемы">
+    <meta name="description" content="Лабораторная работа №2 по программированию: линейный вычислительный процесс, задачи на вычисления">
+    <title>Лабораторная работа №3</title>
+    <link rel="stylesheet" href="../css/lab3.css">
+    <script src="../js/lab3.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Лабораторная работа №3</h1>
+        <h2>Ветвления</h2>
+    </header>
+    <div class="goals">
+        <p>Изучить разветвляющиеся алгоритмы, операторы выбора, программирование разветвляющегося вычислительного процесса.</p>
+    </div>
+    <div class="tasks">
+        <div class="task">
+            <h3>Задача 1</h3>
+            <p>Дано целое число A. Проверить истинность высказывания: «Число A является положительным и двузначным».».</p>
+            <label for="inputA">Введите значение A:</label>
+            <input type="number" id="inputA">
+            <button onclick="check_task1()">Проверить</button>
+            <p id="result_task1"></p>
+        </div>
+        <div class="task">
+            <h3>Задача 2</h3>
+            <p>Дано целое число. Если оно является положительным и четным, то прибавить к нему 1; в противном случае не изменять его. Вывести полученное число.</p>
+            <label for="inputX">Введите значение A:</label>
+            <input type="number" id="inputX">
+            <button onclick="calc_task2()">Полученное число</button>
+            <p id="result"></p>
+        </div>
+         <div class="task">
+            <h3>Задача 3</h3>
+            <p>Вычислить значение функции y = f(x) при произвольных значениях x. y - кусочная функция:</p>
+            <ul>
+                <li>при x < -2, y = x³ + 2a;</li>
+                <li>при -2 ≤ x ≤ 5, y = ln|cos bx|;</li>
+                <li>при  x > 5, y = x²e^x.</li>
+            </ul>
+            <p>Где a = 2.1, b = 6.7.</p>
+            <label for="inputFunc">Введите значение X:</label>
+            <input type="number" id="inputFunc">
+            <button onclick="calc_task3()">Вычислить y</button>
+            <p id="result_task3"></p>
+        </div>
+        <div class="task">
+            <h3>Задача 4</h3>
+            <p>Вычислить значение функции y = f(x) для четырех значений x: -2, 4, 6, 8.</p>
+            <button onclick="calc_task4()">Вычислить</button>
+            <p id="result_task4"></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Лабораторная работа по программированию</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="лабораторная работа, программирование">
+    <meta name="description" content="Лабораторная работа №6 и №7 по программированию">
+    <title>Каталог товаров</title>
+    <link rel="stylesheet" href="../css/labs6-7.css">
+    <script src="../js/labs6-7.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">NEXURA</div>
+        <div class="menu">
+            <div class="latest-products">Latest Products</div>
+            <div class="backpack">Backpack</div>
+            <div class="bags">Bags</div>
+            <div class="accessories">Accessories</div>
+            <div class="collection">Collection</div>
+            <div class="gifting">Gifting</div>
+            <div class="service">Service</div>
+        </div>
+    </div>
+    <div class="catalog">
+        <div class="catalog-header">
+            <h1>Каталог товаров</h1>
+            <div class="add-product-button">
+                <a href="../common/form.html">
+                    <button>Добавить товар</button>
+                </a>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Поиск по товарам...">
+                <button id="searchButton">Поиск</button>
+            </div>
+        </div>
+        <div class="Filter-text">Filter by</div>
+        <div class="filters">
+            <div class="filter-option">Size<span class="arrow"></span></div>
+            <div class="filter-option">Colour<span class="arrow"></span></div>
+            <div class="filter-option">Price<span class="arrow"></span></div>
+            <div class="filter-option">Activity<span class="arrow"></span></div>
+            <div class="filter-option">Weight<span class="arrow"></span></div>
+            <div class="filter-option">Type<span class="arrow"></span></div>
+        </div>
+        <div id="catalog" class="products">
+        </div>
+        <div id="product-modal" class="modal">
+            <div class="modal-content">
+              <span class="close-button" id="close-modal">&times;</span>
+              <img id="modal-product-image" src="" alt="product image">
+              <h2 id="modal-product-title"></h2>
+              <p id="modal-product-description"></p>
+              <p class="price" id="modal-product-price"></p>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
